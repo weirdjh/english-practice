@@ -277,5 +277,61 @@
     "tenseExplanation": "① wasn't asking (과거진행): 당시의 요청이 무엇을 의미하고 있었는지 설명하며 상대의 오해를 정정합니다. didn't ask도 가능하지만 의도 설명에는 wasn't asking이 자연스럽습니다.\n② What I had in mind (과거형 표현): 이미 품고 있던 구상을 회상합니다. 여기서 had는 have의 과거형이지 과거완료가 아닙니다. 과거완료라면 had had in mind가 됩니다.\n③ should describe (조동사): 태그의 바람직한 설계 원칙을 말합니다. 단순 현재 describes는 실제로 그렇게 작동한다는 사실 주장입니다.\n④ happened to be talking about (과거형 + 진행 부정사): 그때 우연히 대화하고 있던 주제였다는 뜻으로, 태그 분류와는 무관하다는 점을 강조합니다.",
     "usageExplanation": "What I had in mind는 의도를 부드럽게 재설명할 때 쓰는 표현입니다. In this sense는 앞에서 정의한 관점에 한정해서 결론을 내리는 말이며, 모든 상황의 '따라서'를 대신하지는 않습니다.",
     "dateType": "added"
+  },
+  {
+    "id": "2026-11-16-01",
+    "date": "2026-11-16",
+    "tags": [
+      "Prepositions",
+      "Time expressions",
+      "Sentence linking",
+      "Useful expressions",
+      "Tenses"
+    ],
+    "title": "Subscribing and checking exceptions",
+    "original": "I subscribed YouTube Premium for a long time ago.",
+    "corrected": "I subscribed to YouTube Premium a long time ago.",
+    "example": "I subscribed to YouTube Premium a few years ago, though I got a free-trial offer in September. That means it has probably ended, unless Apple is still billing me in the background. I'd like to check my subscription settings just to make sure I'm not paying twice.",
+    "ko": "오래전에 YouTube Premium을 구독했어요.",
+    "exampleKo": "몇 년 전에 YouTube Premium을 구독했지만, 9월에 무료 체험 제안을 받았어요. Apple이 뒤에서 계속 요금을 청구하고 있는 게 아니라면 이미 해지되었을 가능성이 커요. 중복 결제가 되지 않는지 확인하기 위해 구독 설정을 점검해 보고 싶어요.",
+    "why": "'Subscribe' takes the preposition 'to' ('subscribed to'), and don't use 'for' before 'ago'.",
+    "linking": "though / unless",
+    "highlights": [
+      "subscribed to",
+      "though",
+      "unless",
+      "just to make sure"
+    ],
+    "tenseExplanation": "① subscribed (과거형): 'a few years ago'처럼 끝난 시점이 있는 지난 일이라 과거형으로 씁니다. 구독을 시작한 사건을 서술합니다.\n② has probably ended (현재완료 + 추측): 과거의 시작이 지금 어떤 상태로 이어졌는지 판단합니다. probably가 있어 지금 시점의 추정임을 드러냅니다.\n③ is still billing (현재진행): 지금도 계속 청구가 이루어지고 있는지를 묻는 뉘앙스로, still이 진행의 지속을 강조합니다.\n④ I'd like to check (현재 희망): I would like to의 축약으로 지금 원하는 바를 정중하게 말합니다. I want to check보다 부드럽습니다.",
+    "usageExplanation": "though는 '~지만, 반면에'로 앞 내용과 대비되는 사실을 가볍게 덧붙입니다. although보다 부담이 적어 일상 문장에 잘 어울립니다.\nunless는 '~하지 않는 한, ~이 아니라면'으로 예외 조건을 만듭니다. 여기서는 'Apple이 계속 청구하고 있지 않다면'이라는 예외를 제시합니다.\n'just to make sure'는 '확인 삼아, 혹시 몰라서'라는 뜻으로, 확인하려는 이유가 안심 때문임을 부드럽게 전합니다.",
+    "dateType": "added"
+  },
+  {
+    "id": "2026-11-16-02",
+    "date": "2026-11-16",
+    "tags": [
+      "Uncountable nouns",
+      "Prepositions",
+      "Sentence linking",
+      "Useful expressions",
+      "Tenses"
+    ],
+    "title": "Uncountable nouns and paraphrasing",
+    "original": "You found two information, and YouTube sent me an offer at September.",
+    "corrected": "You found two pieces of information, and YouTube sent me an offer in September.",
+    "example": "You found two pieces of information in my inbox, including an offer from September. Based on that, you strongly suspect the plan has already ended. Even so, you'd like me to double-check just to make sure I'm not still being charged.",
+    "ko": "두 가지 정보를 찾으셨고, YouTube가 9월에 제안을 보냈어요.",
+    "exampleKo": "제 받은편지함에서 9월 제안을 포함해 두 가지 정보를 찾으셨어요. 그걸 바탕으로 요금제가 이미 끝났다고 강하게 추측하고 계시죠. 그럼에도 여전히 요금이 청구되고 있지 않은지 확인하기 위해 다시 한번 점검해 보길 원하세요.",
+    "why": "'Information' is uncountable, so say 'two pieces of information'. Months take 'in', not 'at' ('in September').",
+    "linking": "Even so",
+    "highlights": [
+      "two pieces of information",
+      "strongly suspect",
+      "Even so",
+      "not still being charged"
+    ],
+    "tenseExplanation": "① found (과거형): 상대가 이미 받은편지함에서 찾아낸 지난 행동을 서술합니다.\n② strongly suspect (현재형): 지금 상대가 품고 있는 판단을 나타냅니다. 시제는 현재지만 내용은 추측이라는 점이 중요합니다.\n③ has already ended (현재완료): 과거에 끝난 일이 지금 상태로 이어짐을 already로 강조합니다.\n④ being charged (현재진행 수동): 'I'm not still being charged'에서 지금도 청구가 계속되는지 여부를 수동태 진행형으로 표현합니다.",
+    "usageExplanation": "'information'은 셀 수 없는 명사라 'two informations'가 아니라 'two pieces of information'이라고 합니다. 셀 때는 piece, bit, item 같은 단위 명사를 씁니다.\n'strongly suspect'는 '강하게 의심하다, 추측하다'로 증거를 바탕으로 확신에 가까운 판단을 말합니다. 'highly think'라고는 하지 않고 'strongly believe'나 'I'm fairly sure'를 씁니다.\n'Even so'는 '그럼에도 불구하고'로, 앞의 추측을 인정하면서도 다른 행동을 요청할 때 씁니다.",
+    "dateType": "added"
   }
 ]

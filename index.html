@@ -151,6 +151,46 @@
     margin-bottom: 7px;
   }
 
+  .labelRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 7px;
+  }
+
+  .labelRow .label { margin-bottom: 0; }
+
+  .listen {
+    flex-shrink: 0;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 650;
+    line-height: 1.2;
+    color: #245eab;
+    background: #eaf1fb;
+    border: 1px solid #d5e0ee;
+    border-radius: 8px;
+    padding: 7px 11px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .listen:hover { background: #dfeaf9; }
+
+  .listen[aria-pressed="true"] {
+    background: #245eab;
+    color: #fff;
+    border-color: #245eab;
+  }
+
+  .listen:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .no-speech .listen { display: none; }
+
   .value {
     font-size: 15px;
     line-height: 1.75;
@@ -382,11 +422,107 @@ function highlightSentences(text, phrases) {
   return toSentences(text).map((line) => highlight(line, phrases)).join('\n');
 }
 
+/* ---------- Listen: browser text-to-speech ---------- */
+
+const speech = {
+  supported: typeof window !== 'undefined'
+    && 'speechSynthesis' in window
+    && typeof window.SpeechSynthesisUtterance === 'function',
+  voice: null,
+  utterance: null,
+  button: null
+};
+
+// Prefer a natural-sounding US English voice, then any US voice, then any English one.
+function pickEnglishVoice() {
+  if (!speech.supported) return null;
+  const voices = window.speechSynthesis.getVoices() || [];
+  const english = voices.filter((voice) => /^en[-_]/i.test(voice.lang || ''));
+  const preferred = /(natural|neural|samantha|google us english|aria|jenny|zira|allison|ava)/i;
+  return english.find((voice) => /^en[-_]US/i.test(voice.lang) && preferred.test(voice.name || ''))
+    || english.find((voice) => /^en[-_]US/i.test(voice.lang))
+    || english[0]
+    || null;
+}
+
+// Put the speaking button back to its idle label (if it is still on the page).
+function idleButton() {
+  const button = speech.button;
+  speech.button = null;
+  speech.utterance = null;
+  if (button && button.isConnected) {
+    button.textContent = '🔊 Listen';
+    button.setAttribute('aria-pressed', 'false');
+  }
+}
+
+function stopSpeaking() {
+  if (!speech.supported) return;
+  window.speechSynthesis.cancel();
+  idleButton();
+}
+
+function listenButton(card, part, description) {
+  if (!speech.supported) return '';
+  return '<button type="button" class="listen" data-speak-id="' + esc(card.id) + '"'
+    + ' data-speak-part="' + esc(part) + '" aria-pressed="false"'
+    + ' aria-label="Listen to ' + esc(description) + '">🔊 Listen</button>';
+}
+
+function speak(text, button) {
+  if (!speech.supported || !text) return;
+  const turningOff = speech.button === button;
+  window.speechSynthesis.cancel();
+  idleButton();
+  if (turningOff) return;
+
+  const utterance = new window.SpeechSynthesisUtterance(text);
+  utterance.lang = 'en-US';
+  utterance.rate = 0.95;
+  if (speech.voice) utterance.voice = speech.voice;
+
+  const finish = () => {
+    if (speech.utterance === utterance) idleButton();
+  };
+  utterance.onend = finish;
+  utterance.onerror = finish;
+
+  speech.utterance = utterance;
+  speech.button = button;
+  button.textContent = '⏹ Stop';
+  button.setAttribute('aria-pressed', 'true');
+  window.speechSynthesis.speak(utterance);
+}
+
+function initSpeech() {
+  if (!speech.supported) {
+    document.documentElement.classList.add('no-speech');
+    return;
+  }
+  speech.voice = pickEnglishVoice();
+  if (typeof window.speechSynthesis.addEventListener === 'function') {
+    window.speechSynthesis.addEventListener('voiceschanged', () => {
+      speech.voice = pickEnglishVoice();
+    });
+  }
+  // One delegated handler keeps working for every card rendered later.
+  document.addEventListener('click', (event) => {
+    const button = event.target && event.target.closest ? event.target.closest('.listen') : null;
+    if (!button) return;
+    const card = state.cards.find((item) => item.id === button.dataset.speakId);
+    if (!card) return;
+    speak(button.dataset.speakPart === 'corrected' ? card.corrected : card.example, button);
+  });
+}
+
 function answer(card) {
   return [
     '<div class="answer">',
     '  <div class="field">',
-    '    <div class="label">Three-sentence English practice</div>',
+    '    <div class="labelRow">',
+    '      <div class="label">Three-sentence English practice</div>',
+    '      ' + listenButton(card, 'example', 'the three practice sentences'),
+    '    </div>',
     '    <div class="value model">' + highlightSentences(card.example, card.highlights) + '</div>',
     '  </div>',
     '  <div class="field">',
@@ -394,7 +530,10 @@ function answer(card) {
     '    <div class="value original">' + esc(card.original) + '</div>',
     '  </div>',
     '  <div class="field">',
-    '    <div class="label">Corrected sentence</div>',
+    '    <div class="labelRow">',
+    '      <div class="label">Corrected sentence</div>',
+    '      ' + listenButton(card, 'corrected', 'the corrected sentence'),
+    '    </div>',
     '    <div class="value corrected">' + esc(card.corrected) + '</div>',
     '  </div>',
     '  <div class="explanation">',
@@ -524,6 +663,7 @@ function restoreQueue() {
 }
 
 function draw() {
+  stopSpeaking();
   if (!state.queue.length) {
     if (state.completed >= state.ids.length) {
       state.round++;
@@ -578,6 +718,7 @@ function renderRandom() {
 /* ---------- Tabs ---------- */
 
 function switchTab(which) {
+  stopSpeaking();
   const random = which === 'random';
   els.allPanel.hidden = random;
   els.randomPanel.hidden = !random;
@@ -619,6 +760,7 @@ async function loadCards() {
 
 async function init() {
   bindTabs();
+  initSpeech();
   let cards;
   try {
     cards = await loadCards();

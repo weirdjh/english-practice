@@ -333,5 +333,63 @@
     "tenseExplanation": "① found (과거형): 상대가 이미 받은편지함에서 찾아낸 지난 행동을 서술합니다.\n② strongly suspect (현재형): 지금 상대가 품고 있는 판단을 나타냅니다. 시제는 현재지만 내용은 추측이라는 점이 중요합니다.\n③ has already ended (현재완료): 과거에 끝난 일이 지금 상태로 이어짐을 already로 강조합니다.\n④ being charged (현재진행 수동): 'I'm not still being charged'에서 지금도 청구가 계속되는지 여부를 수동태 진행형으로 표현합니다.",
     "usageExplanation": "'information'은 셀 수 없는 명사라 'two informations'가 아니라 'two pieces of information'이라고 합니다. 셀 때는 piece, bit, item 같은 단위 명사를 씁니다.\n'strongly suspect'는 '강하게 의심하다, 추측하다'로 증거를 바탕으로 확신에 가까운 판단을 말합니다. 'highly think'라고는 하지 않고 'strongly believe'나 'I'm fairly sure'를 씁니다.\n'Even so'는 '그럼에도 불구하고'로, 앞의 추측을 인정하면서도 다른 행동을 요청할 때 씁니다.",
     "dateType": "added"
+  },
+  {
+    "id": "2026-11-21-01",
+    "date": "2026-11-21",
+    "tags": [
+      "Verb patterns",
+      "Natural phrasing",
+      "Tenses",
+      "Sentence linking",
+      "Useful expressions"
+    ],
+    "title": "An expiring card and 'consider -ing'",
+    "original": "i'm using hyundai card and it will be expired soon. so i'm now considering to change my card. My current card is Naver Hyundai card.",
+    "corrected": "My Naver Hyundai Card is expiring soon, so I'm thinking about switching to a new one.",
+    "example": "My Naver Hyundai Card is about to expire, so I'm considering changing to a different one. That's why I've been comparing a few options to see which one offers the best benefits. I'd like to weigh them carefully before I make a decision.",
+    "ko": "제 네이버 현대카드가 곧 만료되어서, 새 카드로 바꿀까 생각 중이에요.",
+    "exampleKo": "제 네이버 현대카드가 곧 만료되어서, 다른 카드로 바꿀까 고민하고 있어요. 그래서 어떤 카드가 혜택이 가장 좋은지 몇 가지를 비교해 보고 있어요. 결정하기 전에 꼼꼼히 따져 보고 싶어요.",
+    "why": "'Expire' is intransitive, so use 'is expiring soon' or 'is about to expire' instead of 'will be expired'. Also, 'consider' takes '-ing' ('considering changing'), not 'to + verb'.",
+    "linking": "so / That's why",
+    "highlights": [
+      "is about to expire",
+      "considering changing",
+      "That's why",
+      "weigh them carefully"
+    ],
+    "tenseExplanation": "① is about to expire (be about to + 동사원형): 곧 일어날 일을 나타냅니다. 'will be expired'처럼 수동으로 쓰면 '만료될 것이다'가 아니라 '만료 처리된다'는 뜻처럼 어색하게 들립니다.\n② am considering changing (현재진행 + 동명사): 지금 바꿀지 검토 중인 상황을 진행형으로 보여 주고, consider는 목적어로 -ing를 받습니다.\n③ I've been comparing (현재완료진행): 최근부터 지금까지 계속 비교해 오고 있음을 나타내어 고민이 이어지고 있음을 드러냅니다.\n④ offers (현재형): 어떤 카드가 혜택을 준다는 일반적인 사실을 현재형으로 서술합니다.\n⑤ I'd like to weigh (현재 희망): I would like to로 바람을 정중하게 표현합니다.",
+    "usageExplanation": "'expire'는 자동사라 'will be expired'보다 'is expiring soon'이나 'is about to expire'가 자연스럽습니다. 'be expired'는 '만료된 상태'를 형용사처럼 말할 때만 어울립니다.\n'consider'는 동명사를 받으므로 'considering changing'이 맞고 'consider to change'는 쓰지 않습니다. 'consider switching'처럼도 씁니다.\n'That's why'는 '그래서, 그런 이유로'로 앞 문장의 결과를 이어 줍니다. 'so'보다 이유와 결과의 연결을 또렷하게 보여 줍니다.\n'weigh the options'는 '선택지를 저울질하다, 따져 보다'라는 뜻으로 결정 전 비교를 말할 때 씁니다.",
+    "dateType": "added"
+  },
+  {
+    "id": "2026-11-21-02",
+    "date": "2026-11-21",
+    "tags": [
+      "Verb patterns",
+      "Natural phrasing",
+      "Tenses",
+      "Sentence linking",
+      "Useful expressions"
+    ],
+    "title": "Sticking with an issuer and 'can' + base verb",
+    "original": "It would be good if i can continues to use hyundai card because i can use apple pay, but changing to other vendor is also fine",
+    "corrected": "It'd be nice to stick with Hyundai Card for Apple Pay, though I'm open to switching to another issuer too.",
+    "example": "I'd like to stick with Hyundai Card so I can continue using Apple Pay without any hassle. Even so, I'm open to switching to another issuer if the benefits are much better. I'm weighing the trade-offs carefully so any switch actually pays off.",
+    "ko": "Apple Pay 때문에 현대카드를 계속 쓰면 좋겠지만, 다른 카드 발급사로 바꾸는 것도 괜찮아요.",
+    "exampleKo": "Apple Pay를 불편 없이 계속 쓰려면 현대카드를 그대로 유지하고 싶어요. 그럼에도 혜택이 훨씬 좋다면 다른 카드 발급사로 바꿀 의향이 있어요. 바꾼 선택이 실제로 이득이 되도록 장단점을 꼼꼼히 비교하고 있어요.",
+    "why": "Always use the base verb after 'can' ('can continue', not 'can continues'). For credit card companies, use 'another issuer' or 'another card company' instead of 'other vendor'.",
+    "linking": "though / Even so",
+    "highlights": [
+      "stick with",
+      "can continue",
+      "Even so",
+      "open to switching",
+      "another issuer",
+      "weighing the trade-offs"
+    ],
+    "tenseExplanation": "① 'd like to stick (현재 희망): I would like to의 축약으로, 지금 원하는 바를 정중하게 말합니다.\n② can continue (조동사 + 동사원형): can 뒤에는 언제나 동사원형이 옵니다. 그 뒤에 동작을 붙일 때는 'continue using'처럼 -ing를 씁니다.\n③ am open to switching (전치사 to + 동명사): 여기서 to는 전치사라 뒤에 -ing가 옵니다.\n④ am weighing (현재진행): 지금 장단점을 저울질하는 중임을 나타냅니다.",
+    "usageExplanation": "'can' 뒤에는 'can continues'가 아니라 'can continue'처럼 동사원형을 씁니다. 주어가 3인칭 단수여도 can이 있으면 continues를 쓰지 않습니다.\n카드사를 가리킬 때 'vendor'는 물건이나 서비스를 파는 업체라는 뜻이 강해 'another issuer'(카드 발급사)나 'another card company'가 자연스럽습니다.\n'stick with'는 '~을 계속 쓰다, 그대로 유지하다'는 뜻으로, 바꾸지 않고 가겠다는 뜻을 편하게 전합니다.\n'be open to -ing'는 '~할 의향이 있다'로, 지금 당장 바꾸지는 않아도 열려 있음을 나타냅니다.\n'pays off'는 '효과를 내다, 본전을 뽑다'로, 바꾼 결과가 실제로 이득이 되는지를 말합니다.",
+    "dateType": "added"
   }
 ]
